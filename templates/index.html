@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Tailor App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Tailor App</h1>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" name="job_description" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Your Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit">Optimize Resume</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
